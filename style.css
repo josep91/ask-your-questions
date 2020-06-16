@@ -13,8 +13,20 @@ body {
     margin: 0% 16% 0% 16%;
 }
 
+#welcome_message {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+#file_upload_area {
+    text-align: center;
+    display: block;
+    font-family: Monospace;
+}
+
 /*Buttons*/
-.download_button {
-    background: blue;
-    color: white;
+#download_button, #user_questions {
+    background-color: #e7e7e7;
+    color: black;
 }
