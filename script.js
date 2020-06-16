@@ -14,39 +14,30 @@ $(document).ready(function() {
     $("#user_questions").change( function() {
         
         //References the file
-        //const userQuestionsFile = this.files[0];
+        const userQuestionsFile = this.files[0];
         
         //If the user selects a file
-        //if (userQuestionsFile) {
+        if (userQuestionsFile) {
             
             //Sets up input stream from file
             var reader = new FileReader();
             
+            //To read the file (see https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/)
             reader.onload = function() {
-                var questionsReadFromUserFile = this.result;
-                //var testVar = this.result;
-                //$("#user_questions_and_answer_boxes").append("<span>Test" + textVar + "</span>"); //Test
-                document.getElementById('user_questions_from_file').innerText = questionsReadFromUserFile; //Test
-                //$("#test_printing").innerText = questionsReadFromUserFile; //Test
-                //$("#test_printing").text(this.result); 
                 
-            }
+                var questionsReadFromUserFile = this.result;
+                
+                document.getElementById('user_questions_from_file').innerText = questionsReadFromUserFile; //Populates user questions
+            };
             
+            //Tells FileReader to read the file as text
             reader.readAsText(this.files[0]);
-            
-            //Creates HTML string with the user's questions and text boxes for answers
-            var questionText = "<span>Test" + questionsReadFromUserFile + "</span>";
-            
-            //Appends the HTML string to the div element on the page 
-            
-            $("#user_questions_and_answer_boxes").append(questionText);
         
-        //}//End if file    
+        }//End if file    
         //If no file selected
-        //else {
-            
-            //$("#user_questions_and_answer_boxes").append(text);
-        //}
+        else {
+            //Do nothing
+        }
     });//End user upload questions file button listener
     
     //Defines download function
@@ -60,15 +51,19 @@ $(document).ready(function() {
         downloadElement.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToDownload)); //Encodes text in data URL
         downloadElement.setAttribute('download', filenameToDownload);
         
-        //Hides the download element, adds it to the page, clicks the element, then removes the element
+        //Hides the download element
         downloadElement.style.display = 'none'; //I am not using jQuery yet; I am learning first.
+        
+        //Adds to the page
         document.body.appendChild(downloadElement);
         
-        downloadElement.click(); //Simulates a click
+        //Simulates a click
+        downloadElement.click(); 
         
-        document.body.removeChild(downloadElement); //Removes element
+        //Removes element
+        document.body.removeChild(downloadElement); 
         
-    }
+    }//End download function
     
     //Downloads user questions (and answers when complete) when download button is clicked
     $("#download_button").click( function() {
@@ -81,7 +76,8 @@ $(document).ready(function() {
         //FIXM: Check newlines
         userQuestionsAndAnswersText += "My Answers\n\n" + document.getElementById("user_answer_box").value;
         
-        download(filenameToDownload, userQuestionsAndAnswersText); //Downlaods file
+        //Downlaods file
+        download(filenameToDownload, userQuestionsAndAnswersText); 
         
     });//End download button
     
