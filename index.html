@@ -9,16 +9,27 @@
   <body>
     <script src="jquery-3.5.1.js"></script>
     <script src="script.js"></script>
+    
     <h1>Come Ask Your Questions!</h1>
-    <span id="main_text">
+    
+    <span id="welcome_message">
         Hi! I'm sure you have a lot of questions. This website will help you in finding your own answers. How do we do that?
+        <br>
+    </span>
+    
+    <span id="main_text">
         <br>
         First, write down your questions. Make sure to end each question with a question mark (?). When that is done, upload the text file here: 
         <br>
     </span>
     
-    <label for="user_questions">Select a file that contains your questions</label>
-    <input type="file" id="user_questions" name="user_questions">
+    <!-- User uploads file -->
+    <div id="file_upload_area">    
+        <br>
+        <label for="user_questions">Select a file that contains your questions</label>
+        <input type="file" id="user_questions" name="user_questions">
+        <br>
+    </div>
     
     <span id="main_text">
         <br>
