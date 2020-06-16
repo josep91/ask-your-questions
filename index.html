@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-32">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Ask Your Questions</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -13,62 +13,66 @@
     <h1>Come Ask Your Questions!</h1>
     
     <span id="welcome_message">
-        Hi! I'm sure you have a lot of questions. This website will help you in finding your own answers. How do we do that?
+        Hi! I'm sure you have a lot of questions. This website will help you in finding your own answers. How do you do that?
         <br>
     </span>
     
-    <span id="main_text">
+    <span>
         <br>
-        First, write down your questions. Make sure to end each question with a question mark (?). When that is done, upload the text file here: 
-        <br>
+        <span class="guide_word">First,</span> write down your questions. Upload a text (.txt) file with your questions.
     </span>
     
     <!-- User uploads file -->
     <div id="file_upload_area">    
-        <br>
         <label for="user_questions">Select a file that contains your questions</label>
         <input type="file" id="user_questions" name="user_questions">
         <br>
     </div>
     
-    <span id="main_text">
+    <span>
         <br>
-        Second, pray. "Scripture.. James 1:5." As you pray, write what comes to mind in the boxes below each question.
-        <br>
-        You can also look on ChurchofJesusChrist.org and ComeUntoChrist.org.
-        <br>
-        <br>
+        <span class="guide_word">Second,</span> find your answers. Here are some ways you can do that:
     </span>
+    <ul>
+        <li>Pray. James 1:5 in the Bible reads, "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."</li>
+        <li>Visit <a href="https://www.churchofjesuschrist.org/">ChurchofJesusChrist.org</a> and <a href="https://www.comeuntochrist.org/">ComeUntoChrist.org</a>.</li>
+        <li>Ask your parents for advice.</li>
+        <li>For technical or knowledge-based questions, try asking a teacher, looking in a book, or using a Google search.</li>
+        <li>If you don't know the answer, it's okay to put "I don't know."</li>
+    </ul>
     
-    <div class="UseQandA" id="user_questions_and_answer_boxes">
+    <div class="user_questions_area" id="user_questions_and_answer_boxes">
+        <span id="my_questions_title">My Questions</span><br>
         <span id="user_questions_from_file">
-            Your Questions
+            Your questions will be shown here.
         </span>
     </div>
     
-    <!--Testing-->
-    <span id="test_printing"> 
-            
-    </span>
-    
     <!-- Box for user answers -->
     <br>
-    <textarea id="user_answer_box" rows="4">Type your answers.</textarea>
+    <textarea id="user_answer_box" rows="4" >Type your answers here.</textarea>
+    
+    <br><br>
+    <span>
+        <span class="guide_word">Third,</span> download a copy of your questions and answers for safekeeping.
+    </span>
+    <br><br>
+    
+    <div id="download_file_area">
+        <label for="download_button">Download questions with answers</label><br>
+        <input type="button" id="download_button" name="download_button" value="Download">
+    </div>
     
     <br>
-    <span id="main_text">
-        Last, you can download a copy of your questions and answers for safekeeping.
-        
+    <span>
+        <span class="guide_word">Last,</span> remember to say thank you to the people who helping you find answers. Don't forget to pray (as appropriate)!
     </span>
     <br>
-    
-    <label for="download_button">Download questions with answers.</label>
-    <input type="button" id="download_button" name="download_button" value="Download">
-    
     <br>
-    <span id="main_text">
-
-        Remember to say thank you in your next prayer!
+    <span>
+        Created by Joseph Nielson in June 2020.
     </span>
+    <br>
+    <br>
   </body>
 </html>
