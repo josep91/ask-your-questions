@@ -4,29 +4,59 @@
     Date: June 16, 2020
 */
 
+/*Title*/
 h1 {
     text-align: center;
     font-family: Arial;
 }
 
+/*All of the page*/
 body {
     margin: 0% 16% 0% 16%;
+    line-height: 1.5em;
+    background-color: lightblue;
 }
 
+/*First sentence*/
 #welcome_message {
     text-align: center;
     display: block;
-    width: 100%;
+    border: 1px solid black;
 }
 
-#file_upload_area {
+/*First words of key paragraphs*/
+.guide_word {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/*The label and button for uploading user questions*/
+#file_upload_area, #download_file_area {
     text-align: center;
     display: block;
     font-family: Monospace;
+    background-color: inherit;
+    font-size: 1.2em; 
 }
 
-/*Buttons*/
-#download_button, #user_questions {
+/*The user's questions*/
+.user_questions_area {
+    font-family: Arial;
+    line-height: 2em;
+}
+
+/*Title for the user's questions*/
+#my_questions_title {
+    font-weight: bold;
+}
+
+/*Text area for user answers*/
+#user_answer_box {
+    width: 100%;
+}
+
+/*Download button*/
+#download_button {
     background-color: #e7e7e7;
     color: black;
 }
