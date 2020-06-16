@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ask Your Questions</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="jquery-3.5.1.js"></script>
+    <script src="script.js"></script>
+    <h1>Come Ask Your Questions!</h1>
+    <span id="main_text">
+        Hi! I'm sure you have a lot of questions. This website will help you in finding your own answers. How do we do that?
+        <br>
+        First, write down your questions. Make sure to end each question with a question mark (?). When that is done, upload the text file here: 
+        <br>
+    </span>
+    
+    <label for="user_questions">Select a file that contains your questions</label>
+    <input type="file" id="user_questions" name="user_questions">
+    
+    <span id="main_text">
+        <br>
+        Second, pray. "Scripture.. James 1:5." As you pray, write what comes to mind in the boxes below each question.
+        <br>
+        You can also look on ChurchofJesusChrist.org and ComeUntoChrist.org.
+        <br>
+        <br>
+    </span>
+    
+    <div class="UseQandA" id="user_questions_and_answer_boxes">
+        <span id="user_questions_from_file">
+            Your Questions
+        </span>
+    </div>
+    
+    <!--Testing-->
+    <span id="test_printing"> 
+            
+    </span>
+    
+    <!-- Box for user answers -->
+    <br>
+    <textarea id="user_answer_box" rows="4">Type your answers.</textarea>
+    
+    <br>
+    <span id="main_text">
+        Last, you can download a copy of your questions and answers for safekeeping.
+        
+    </span>
+    <br>
+    
+    <label for="download_button">Download questions with answers.</label>
+    <input type="button" id="download_button" name="download_button" value="Download">
+    
+    <br>
+    <span id="main_text">
+
+        Remember to say thank you in your next prayer!
+    </span>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+/*
+    Defines style for Ask Your Questions site.
+    Author: Joseph Nielson
+    Date: June 16, 2020
+*/
+
+h1 {
+    text-align: center;
+    font-family: Arial;
+}
+
+body {
+    margin: 0% 16% 0% 16%;
+}
+
+/*Buttons*/
+.download_button {
+    background: blue;
+    color: white;
+}
